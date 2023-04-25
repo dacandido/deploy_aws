@@ -6,4 +6,13 @@ app.get('/',(request,response)=>{
     return response.json({message:'Server is up'});
 })
 
-app.listen(3001)
+app.get('/atualizou',(request,response)=>{
+    return response.json({message:'Commit atualizou'});
+})
+
+app.post('/teste',(request,response)=>{
+    const {name,date} = request.body;
+    return response.json({name,date});
+})
+
+app.listen(3002)
